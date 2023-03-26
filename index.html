@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Article 12</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+    <!-- nav bar font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <!-- body font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- hamburger navigation -->
+	<div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <div class="overlay-content"> <!-- hamburger navigation links -->
+            <a href="#article" onclick="closeNav()">Home</a>
+            <a href="#article12" onclick="closeNav()">Article 12</a>
+            <a href="#benefits" onclick="closeNav()">Benefits</a>
+            <a href="#contact" onclick="closeNav()">Contact Us</a>
+        </div>
+    </div> <!-- hamburger navigation close -->
+    <span class="hamburger" onclick="openNav()"><a>&#9776;</a></span>
+
+
+    <div class="wrapper" id="article">
+
+        <!-- home page -->
+        <section class="speaker"> <!-- speaker image -->
+			<img src="speaker.png" alt="speaker" class="speakerImage">
+		</section>
+
+		<section class="home" id="home"> <!-- home text -->
+            <div class="right">
+                <img src="right.png" alt="you have the right to be" class="rightImage">
+            </div>
+            <div class="heard">
+                <img src="heard.png" alt="heard" class="heardImage">
+            </div>
+		</section> <!-- home page close -->
+        
+
+        <!-- article 12 page -->
+        <section class="article12" id="article12"> <!-- article 12 text -->
+            <div class="box sb1">
+                <div class="text-bubble"> 
+                    <p>Article 12 of the Children Rights Convention states that "Children have the right to 
+                        give their opinions freely on issues that affect them." (UNICEF)</p>
+                    <p>To put it simply, young people have the right to be heard.
+                        Their opinions should not be overshadowed by a parent or adult. </p>
+                </div>
+            </div>
+            <div class="article">
+                <img src="article.png" alt="article 12" class="articleImage">
+            </div>
+        </section>
+
+        <section class="house"> <!-- house image -->
+            <img src="house.png" alt="house and child" class="houseImage">
+        </section> <!-- article 12 page close -->
+		
+
+        <!-- benefits page -->
+        <section class="benefits" id="benefits">
+            <div class="brain"> <!-- brain section -->
+                <img src="brain.png" alt="brain" class="brainImage">
+            </div>
+            <div class="brainbenefit">
+                <p>Studies have shown that over-control over children would lead to "autonomy threat"
+                    in that the child would feel as if they are less able and trustworthy. 
+                    By letting young people have a voice, they will feel much more competent and confident.
+                </p>
+            </div>
+
+            <div class="benefithead"> <!-- benefits heading -->
+                <img src="benefit.png" alt="benefits" class="benefit">
+            </div>
+
+            <div class="smilebenefit"> <!-- smile section -->
+                <p>Giving young people a choice over important decisions also means 
+                    they will be emotionally more stable and happier. It boosts their self-esteem and 
+                    makes them feel respected and heard, contributing to good health and social relationships.
+                </p>
+            </div>
+            <div class="smile">
+                <img src="smile.png" alt="smiley face" class="smileImage">
+            </div>
+        </section> <!-- benefits page close-->
+
+        <!-- contact us page -->
+        <section class="contactus" id="contact">
+            <div class="contact">
+                <img src="contact.png" alt="contact us" class="contactImage">
+            </div>
+            <p class="contact-para">
+                Send us any questions about Article 12 or this website through the form below!
+            </p>
+            
+            <!-- contact form -->
+            <div class="form">
+                <form id="form">
+                    <p><label>Name:</label><input id="nameInput" pattern="[A-Za-z]{1,50}" title="Please enter your name." required>
+                    <p><label>Email:</label><input id="emailInput" type="email" pattern=".{1,64}@.{1,254}" title="Please enter a valid email." required>
+                    <p><label>Message:</label><textarea id="messageText" rows=10 cols=15 required></textarea>
+                    <button id="sendButton">Send</button>
+                </form>
+            </div>
+
+        </section> <!-- contact us page close -->
+
+    </div> <!-- wrapper close -->
+
+
+    
+    <script>
+        /* hamburger nav open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+            }
+
+        /* hamburger nav close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%" 
+        }
+
+
+        /* check if form empty */
+        function checkFields(){
+            if((document.getElementById("nameInput").value!="")
+            && (document.getElementById("emailInput").value!="") 
+            && (document.getElementById("messageText").value!="")) {
+                sendMessage();
+            } 
+            else {
+                return;
+            }
+        }
+
+        /* form submit and send alert */
+        function sendMessage(){
+            document.getElementById("form").submit();
+            document.getElementById("form").reset();
+            alert("Thank you for your message! We will reply back as soon as possible.");
+        }
+
+        sendButton.onclick = checkFields;
+    </script>
+    
+    <!-- smooth scroll javascript -->
+    <script src="smoothscroll.js"></script>
+    <script src="custom.js"></script>
+
+</body>
+
+</html>

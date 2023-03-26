@@ -1,0 +1,476 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFCD82;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+p {
+  font-size: 1.5vw;
+  line-height: 160%;
+}
+
+
+
+/* navigation bar
+-------------------------------------*/
+.overlay { 
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(255, 205, 130); /* fallback color */
+  background-color: rgb(255, 205, 130, 0.9); /*  w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; 
+}
+  
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center; /* Centered text/links */
+  margin-top: 1vw; /* to avoid conflict with the close button on smaller screens */
+  font-family: 'Poppins', sans-serif;
+}
+  
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+  
+.overlay a:hover, .overlay a:focus {
+  color: #468DD4;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 5em;
+}
+
+.hamburger {
+  position: fixed;
+  left: 95vw;
+  color: #ffffff;
+  font-size: 4vw;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  color: #468DD4;
+}
+
+
+
+/* home page
+-------------------------------------*/
+.wrapper {
+	margin: 0 8vw 0 9vw;
+	padding-top: 3vw;
+
+}
+
+.speaker {
+  width: 40%;
+	margin: 0 0;
+	padding: 3vw 3vw 0 3vw;
+	float: left;
+  z-index: -2;
+  animation-name: fastshake;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+
+.speakerImage {
+  width: 110%;
+}
+
+@keyframes fastshake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(1px, 1px) rotate(0deg);}
+  90% { transform: translate(1px, 1px) rotate(0deg);}
+  100% { transform: translate(1px, 1px) rotate(0deg);}
+}
+
+.home {
+  width: 40%;
+	margin: 0 0 0 0;
+	padding: 3vw 6.6vw 4vw 0;
+	float: left;
+
+}
+
+.right {
+	width: 100%;
+	float: left;
+  margin: 3vw 0 0 -5.5vw;
+  position: relative;
+  z-index: -1;
+
+}
+
+.rightImage {
+  width: 130%;
+}
+
+.heard {
+  width: 100%;
+	float: left;
+  margin: -3.5vw 0 0 -5vw;
+  padding: 0 0 0 0;
+  animation-name: fastshake;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+
+.heardImage {
+  width: 130%;
+}
+
+
+
+/* article 12 page
+-------------------------------------*/
+.house {
+  width: 40%;
+	padding: 4vw 3vw 0 0;
+  margin: 5vw 0;
+	float: left;
+  animation-name: gentleshake;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.houseImage {
+  width: 120%;
+}
+
+@keyframes gentleshake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(1px, 1px) rotate(0deg); }
+  20% { transform: translate(1px, 1px) rotate(0deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(1px, 1px) rotate(0deg);}
+  90% { transform: translate(1px, 1px) rotate(0deg);}
+  100% { transform: translate(1px, 1px) rotate(0deg);}
+}
+
+.article12 {
+	width: 40%;
+  margin: 5vw 0;
+	padding: 6vw 1vw 0.5vw 5vw;
+	float: right;
+	text-align: center;
+
+}
+
+.article {
+  float: left;
+  width: 100%;
+  margin: 3vw 0 0 -11vw;
+  padding: 0 0 0 0;
+}
+
+.articleImage {
+  width: 140%;
+}
+
+
+
+/* article 12 text bubble
+-------------------------------------*/
+.box {
+  width: 40vw;
+  height: 20vw;
+  margin: 0 0 0 -8vw;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  color: black;
+  position:relative;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+
+.sb1:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 1vw solid rgba(255, 255, 255, 0.9);
+  border-right: 1vw solid transparent;
+  border-top: 1vw solid rgba(255, 255, 255, 0.9);
+  border-bottom: 1vw solid transparent;
+  top: 20vw;
+  left: 0vw;
+}
+
+.text-bubble {
+  padding: 0.7vw 2vw;
+}
+
+
+
+/* benefits page
+-------------------------------------*/
+.benefits {
+  width: 100%;
+  margin-top: 100vw;
+  margin-bottom: 25vw;
+  display: block; 
+}
+
+.brain {
+  width: 30%;
+	padding: 1vw 0 0 8vw;
+  transition: 0.5s;
+}
+
+.brain:hover {
+  transform: scale(1.1);
+}
+
+.brainImage {
+  width: 70%;
+}
+
+.brainbenefit {
+  width: 55%;
+	margin-top: -17vw;
+  padding: 3.5vw 7vw 0 0;
+  text-align: center;
+  float: right;
+
+}
+
+.benefithead {
+  text-align: center;
+  margin-top: -2vw;
+  margin-bottom: -2vw;
+}
+
+.benefit {
+  margin-top: -2.5vw;
+  width: 55%;
+}
+
+.smile{
+  width: 30%;
+	padding: 0 0 0 4vw;
+  float: right;
+  transition: 0.5s;
+}
+
+.smile:hover {
+  transform: scale(1.1);
+}
+
+.smileImage {
+  width: 70%;
+}
+
+.smilebenefit {
+  width: 55%;
+  float: left;
+  margin: 2vw 0 0 6vw;
+  text-align: center;
+}
+
+
+
+/* contact us page
+-------------------------------------*/
+.contactus {
+  margin-bottom: 4vw;
+}
+
+.contact {
+  width: 70%;
+  margin-left: 12vw;
+  margin-top: 18vw;
+  padding-top: 2vw;
+  animation-name: gentleshake;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.contactImage {
+  width: 100%;
+}
+
+.contact-para {
+  text-align: center;
+}
+
+
+/* contact form
+-------------------------------------*/
+.form {
+  padding-left: 14vw;
+  padding-top: 0.5vw;
+}
+
+input,
+textarea {
+  width: 40vw;
+}
+
+textarea {
+  height: 15vw;
+  resize: none;
+  vertical-align: top;
+}
+
+label {
+  display: inline-block;
+  width: 9vw;
+}
+
+button {
+  vertical-align: bottom;
+  margin-left: 1vw;
+  padding: 0.5vw 1vw;
+}
+
+
+
+/* media screen responsiveness
+-------------------------------------*/
+@media screen and (min-height: 700px) {
+  .wrapper {
+    padding-top: 11vw;
+  }
+
+  .house, 
+  .article12 {
+    padding-top: 12vw;
+  }
+
+  .benefits {
+    padding-top: 7vw;
+    margin-bottom: 28vw;
+  }
+
+  .contactus {
+    padding-top: 2vw;
+    margin-bottom: 10vw;
+  }
+
+  .contact {
+    margin-top: 0;
+  }
+
+  .overlay a {
+    padding: 1vw;
+  }
+
+}
+
+@media screen and (max-width: 1130px) {
+  .wrapper {
+    padding-top: 5vw;
+  }
+
+  .house, .article12 {
+    padding-top: 8vw;
+  }
+
+  .benefits {
+    padding-top: 3.5vw;
+  }
+
+  .contactus {
+    margin-top: -2vw;
+    margin-bottom: 8vw;
+  }
+
+  .contact {
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (max-width: 1070px) {
+  .wrapper {
+    padding-top: 10vw;
+  }
+
+  .house, .article12 {
+    padding-top: 14vw;
+  }
+
+  .benefits {
+    padding-top: 10vw;
+    margin-bottom: 32vw;
+  }
+
+  .contactus {
+    margin-top: 10vw;
+    margin-bottom: 13vw;
+  }
+
+  .hamburger {
+    font-size: 5vw;
+  }
+
+}
+
+@media screen and (max-width: 876px) {
+
+  .wrapper {
+    padding-top: 20vw;
+  }
+
+  .house, .article12 {
+    padding-top: 20vw;
+    padding-bottom: 30vw;
+  }
+
+  .benefits {
+    margin-top: 125vw;
+    padding: 0 0;
+  }
+
+  .contactus {
+    margin-top: 40vw;
+    margin-bottom: 15vw;
+  }
+
+  .hamburger {
+    left: 92vw;
+    font-size: 6vw;
+  }
+
+}
